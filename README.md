@@ -97,7 +97,7 @@ set template lab-template config  vsys vsys1 zone L3-100-NET-Lab network layer3 
 set template lab-template config  vsys vsys1 zone L3-100-NET-Lab enable-user-identification yes
 ```
 
-Proper Local to Mapped Decleration in [```config_object_mapping.txt```](config_object_mapping.txt)
+Proper Local to Mapped Declaration in [```config_object_mapping.txt```](config_object_mapping.txt)
 ```
 set zone, set template TEMPLATE_VAR config vsys vsys1 zone
 ```
