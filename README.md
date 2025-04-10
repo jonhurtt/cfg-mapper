@@ -65,6 +65,43 @@ Make definitions in [```config_object_mapping.txt```](config_object_mapping.txt)
 #=============================================================================
 ```
 
+## Determining Local to Mapped
+
+Using existing enviornments 
+
+Getting Local Configuration 
+```
+set cli config-output-format set
+configure
+show zone
+```
+
+Example output of Local Config
+```
+show zone
+set zone L3-100-NET-Lab network layer3 ethernet1/2
+set zone L3-100-NET-Lab enable-user-identification yes
+```
+
+Getting Mapped Configuration
+```
+set cli config-output-format set
+configure
+show | match 'zone '
+```
+Note the trailing space will reduce the number matches, inspect configuration and find command.
+
+Example output of Mapped Config
+```
+set template lab-template config  vsys vsys1 zone L3-100-NET-Lab network layer3 ethernet1/2
+set template lab-template config  vsys vsys1 zone L3-100-NET-Lab enable-user-identification yes
+```
+
+Proper Local to Mapped Decleration in [```config_object_mapping.txt```](config_object_mapping.txt)
+```
+set zone, set template TEMPLATE_VAR config vsys vsys1 zone
+```
+
 ## Execute Script
 ```
 ./config_mapper.py [ -input-dir <filename> -debug ]
