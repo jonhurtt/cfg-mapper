@@ -1,21 +1,21 @@
 # Config Mapper
-Conifguration Mapper that will take a local configuration and extract and replace with mapped configuration. 
+Configuration Mapper that will take a local configuration and extract and replace with mapped configuration. 
 
 Last Updated On April 10th, 2025
 
-## Test Enviornment
+## Test Environment
 Tested on Python 3.9.6
 Tested with configuration file of 2,741 lines
 
 ## Known Issues.
-1. Possible Duplication in Output of command lines if matches on mutiple configuration objects in ```_output\output_config.cfg```
+1. Possible Duplication in Output of command lines if matches on multiple configuration objects in ```_output\output_config.cfg```
 
 ## Actions Performed
 
 1. Will Search through Local Configurations for configuration objects found in [```config_object_mapping.txt```](config_object_mapping.txt)
 1. Will Map the configuration by replacing ```<local_config>``` with ```<mapped_config>``` within all files (*.cfg) defined in ```input_directory```
 1. Will use the sub-folder of the filepath for ```TEMPLATE_VAR``` declared in ```config_object_mapping.txt```](config_object_mapping.txt)
-1. Will Provide a File formated for ingestion can be found in [```_output/```](_output/readme) in subdirecotries similar to input
+1. Will Provide a File formatted for ingestion can be found in [```_output/```](_output/readme) in subdirectories similar to input
 
  
 ## Download Script
@@ -29,7 +29,7 @@ chmod +x config_mapper.py
 ```
 
 ## Retrieving Local Configuration on PAN-OS Devices
-### SSH and Authenciate to the Device & Change to Set Output Format
+### SSH and Authenticate to the Device & Change to Set Output Format
 ```
 set cli config-output-format set
 ```
@@ -60,14 +60,14 @@ Make definitions in [```config_object_mapping.txt```](config_object_mapping.txt)
 ```
 #=============================================================================
 #Example List of Configuration Objects to Search for, a space will be appended at end of each command
-#Synatx: <local_config>, <mapped_config>
+#Syntax: <local_config>, <mapped_config>
 #Use Variable of TEMPLATE_VAR for dynamic creation of variables based on folder structure.
 #=============================================================================
 ```
 
 ## Determining Local to Mapped
 
-Using existing enviornments 
+Using existing environments 
 
 Getting Local Configuration 
 ```
@@ -93,8 +93,8 @@ Note the trailing space will reduce the number matches, inspect configuration an
 
 Example output of Mapped Config
 ```
-set template lab-template config  vsys vsys1 zone L3-100-NET-Lab network layer3 ethernet1/2
-set template lab-template config  vsys vsys1 zone L3-100-NET-Lab enable-user-identification yes
+set template lab-template config vsys vsys1 zone L3-100-NET-Lab network layer3 ethernet1/2
+set template lab-template config vsys vsys1 zone L3-100-NET-Lab enable-user-identification yes
 ```
 
 Proper Local to Mapped Declaration in [```config_object_mapping.txt```](config_object_mapping.txt)
@@ -153,7 +153,7 @@ set zone, set template TEMPLATE_VAR config vsys vsys1 zone
 ======================================================================================================================================================
 12:36.20.977313 PM: End Time: Thursday, April 10, 2025 @ 12:36.20
 ======================================================================================================================================================
-12:36.20.977321 PM: Time Elapased: 0.136613 seconds
+12:36.20.977321 PM: Time Elapsed: 0.136613 seconds
 ======================================================================================================================================================
 12:36.20.977323 PM: Output Configuration File(s) written to _output/
 ======================================================================================================================================================
@@ -169,7 +169,7 @@ set zone, set template TEMPLATE_VAR config vsys vsys1 zone
 ./config_mapper.py -input-dir _input -debug
 ```
 
-### Send all output to debug file (Recommended for Troublshooting)
+### Send all output to debug file (Recommended for Troubleshooting)
 ```
 ./config_mapper.py -input-dir _input -debug > _debug_output.txt
 ```
@@ -212,7 +212,7 @@ set zone, set template TEMPLATE_VAR config vsys vsys1 zone
 ======================================================================================================================================================
 12:36.22.314927 PM: End Time: Thursday, April 10, 2025 @ 12:36.22
 ======================================================================================================================================================
-12:36.22.314935 PM: Time Elapased: 0.187291 seconds
+12:36.22.314935 PM: Time Elapsed: 0.187291 seconds
 ======================================================================================================================================================
 12:36.22.314938 PM: Output Configuration File(s) written to _output/
 ======================================================================================================================================================
@@ -248,7 +248,7 @@ Located at ```_output\<TEMPLATE_VAR>\<input_filename>.cfg```
 #======================================================================================================================================================
 ```
 
-##  Load Configuratoin
+##   Load Configuration
 
 ### Via SSH on Panorama enable scripting mode
 ```

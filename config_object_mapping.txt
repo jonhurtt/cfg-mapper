@@ -1,6 +1,6 @@
 #=============================================================================
 #Example List of Configuration Objects to Search for, a space will be appended at end of each command
-#Synatx: <local_config>, <mapped_config>
+#Syntax: <local_config>, <mapped_config>
 #Use Variable of TEMPLATE_VAR for dynamic creation of variables based on folder structure.
 #=============================================================================
 #set deviceconfig, set template TEMPLATE_VAR config deviceconfig
@@ -9,7 +9,7 @@
 #set network interface, set template TEMPLATE_VAR config network
 
 #=============================================================================
-#Example Mutli Line Commands
+#Example MutliLine Commands
 #=============================================================================
 #set deviceconfig system login-banner, set template TEMPLATE_VAR config deviceconfig system login-banner
 #et shared certificate, set template TEMPLATE_VAR config shared certificate

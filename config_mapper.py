@@ -145,7 +145,7 @@ def check_for_duplication(input_config_command,raw_config_commands ):
 	return True
 
 #*****************************************************
-#Find Config Ojbects in File
+#Find Config Objects in File
 #*****************************************************
 def func_find_config_objects(input_filename, config_object_mapping):
 	first_pass_flag = True
@@ -180,7 +180,7 @@ def func_find_config_objects(input_filename, config_object_mapping):
 						else:
 							log_debug_event("[MATCH] "+config_object+" --> Found in ["+input_config_command.strip()+"]", "func_find_config_objects")
 
-						#Check to see if input command is mutli-line
+						#Check to see if input command is multi-line
 						if check_multi_line(input_config_command):
 							log_debug_event("Multi-Line Detected: " + input_config_command.strip()[:char_limit], "func_find_config_objects")
 							while(not end_of_line_flag):
@@ -287,14 +287,14 @@ def format_output(input_filepath, raw_config_commands, config_object_mapping):
 
 	#Insert Header
 	formatted_config_commands += get_output_file_header(input_filepath, config_object_mapping)
-	log_debug_event("Begin Formating with Mappings","format_output")
+	log_debug_event("Begin Formatting with Mappings","format_output")
 	for config_object_map in config_object_mapping.values():
 		config_object = config_object_map['local']
 		log_debug_event("Start mapping from Local: "+config_object+" ","format_output")
 		formatted_config_commands += get_command_header(config_object_map)
 		
 		for raw_config_command in raw_config_commands:
-			log_debug_event("Local: "+config_object+" - rawconfig: "+raw_config_command+" ","format_output")
+			log_debug_event("Local: "+config_object+" - raw_config: "+raw_config_command+" ","format_output")
 			
 			#If raw configuration command matches current configuration object
 			if config_object+space in raw_config_command: #add space at end of each config object
@@ -414,7 +414,7 @@ process_directory(input_dir, config_object_mapping)
 end = timer()
 end_time = datetime.strftime(datetime.today(), date_format)
 log_event("End Time: " + end_time)
-log_event("Time Elapased: " + str(timedelta(seconds=end-start).total_seconds()) + " seconds")
+log_event("Time Elapsed: " + str(timedelta(seconds=end-start).total_seconds()) + " seconds")
 log_event("Output Configuration File(s) written to "+output_dir)
 log_event("End of App")
 print(spacer)
