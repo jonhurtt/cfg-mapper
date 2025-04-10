@@ -58,8 +58,11 @@ show
 Make definitions in [```config_object_mapping.txt```](config_object_mapping.txt)
 
 ```
+#=============================================================================
 #Example List of Configuration Objects to Search for, a space will be appended at end of each command
 #Synatx: <local_config>, <mapped_config>
+#Use Variable of TEMPLATE_VAR for dynamic creation of variables based on folder structure.
+#=============================================================================
 ```
 
 ## Execute Script
