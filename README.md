@@ -20,7 +20,7 @@ Tested with configuration file of 2,741 lines
  
 ## Download Script
 ```
-git clone https://github.com/jonhurtt/eol-template-generator.git
+git clone https://github.com/jonhurtt/cfg-mapper.git
 ```
 
 ## Change permissions for script
