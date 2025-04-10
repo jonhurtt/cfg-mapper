@@ -222,12 +222,4 @@ set cli scripting-mode on
 commit
 ```
 
-# Additional Information
-- How to Perform a Device Config Import into Panorama
-- [https://knowledgebase.paloaltonetworks.com/KCSArticleDetail?id=kA10g000000ClZSCA0](https://knowledgebase.paloaltonetworks.com/KCSArticleDetail?id=kA10g000000ClZSCA0)
-- KB Viewing the configuration in set and XML format
-- [https://knowledgebase.paloaltonetworks.com/KCSArticleDetail?id=kA10g000000ClHoCAK](https://knowledgebase.paloaltonetworks.com/KCSArticleDetail?id=kA10g000000ClHoCAK)
-- How to Import Palo Alto Networks Firewall Configurations into Panorama
-- [https://knowledgebase.paloaltonetworks.com/KCSArticleDetail?id=kA10g000000Clf2CAC&refURL=http%3A%2F%2Fknowledgebase.paloaltonetworks.com%2FKCSArticleDetai](https://knowledgebase.paloaltonetworks.com/KCSArticleDetail?id=kA10g000000Clf2CAC&refURL=http%3A%2F%2Fknowledgebase.paloaltonetworks.com%2FKCSArticleDetai)
-
 [/end]
