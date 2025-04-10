@@ -178,3 +178,4 @@ cython_debug/
 .DS_Store
 _debug_output.txt
 .vscode/
+_archived_versions
