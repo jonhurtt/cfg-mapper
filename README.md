@@ -1,7 +1,7 @@
 # Config Mapper
-Configuration Mapper that will take a local configuration and extract and replace with mapped configuration. 
-
 Last Updated On April 10th, 2025
+
+Configuration Mapper that will take a local configuration and extract and replace with mapped configuration. 
 
 ## Test Environment
 Tested on Python 3.9.6
@@ -12,10 +12,10 @@ Tested with configuration file of 2,741 lines
 
 ## Actions Performed
 
-1. Will Search through Local Configurations for configuration objects found in [```config_object_mapping.txt```](config_object_mapping.txt)
-1. Will Map the configuration by replacing ```<local_config>``` with ```<mapped_config>``` within all files (*.cfg) defined in ```input_directory```
-1. Will use the sub-folder of the filepath for ```TEMPLATE_VAR``` declared in ```config_object_mapping.txt```](config_object_mapping.txt)
-1. Will Provide a File formatted for ingestion can be found in [```_output/```](_output/readme) in subdirectories similar to input
+1. Search through Local Configurations located in ```input_directory``` for configuration objects found in [```config_object_mapping.txt```](config_object_mapping.txt)
+1. Maps the configuration by replacing ```<local_config>``` with ```<mapped_config>``` within all files (*.cfg) defined in ```input_directory```
+1. Uses the sub-folder of the filepath for ```TEMPLATE_VAR``` declared in ```config_object_mapping.txt```](config_object_mapping.txt)
+1. Provides a File formatted for ingestion can be found in [```_output/```](_output/readme) in subdirectories similar to input
 
  
 ## Download Script
@@ -29,24 +29,25 @@ chmod +x config_mapper.py
 ```
 
 ## Retrieving Local Configuration on PAN-OS Devices
-### SSH and Authenticate to the Device & Change to Set Output Format
+
+SSH and Authenticate to the Device & Change to Set Output Format
 ```
 set cli config-output-format set
 ```
-### Disable Pager to Off
+Disable Pager to Off
 ```
 set cli pager off
 ```
-### Navigate to Configuration
+Navigate to Configuration
 ```
 configure
 ```
-### Run Show Command to capture local configuration
+Run Show Command to capture local configuration
 ```
 show
 ```
 
-### All Commands to gather local configuration.
+All Commands to gather local configuration.
 ```
 set cli config-output-format set
 set cli pager off
@@ -63,6 +64,8 @@ Make definitions in [```config_object_mapping.txt```](config_object_mapping.txt)
 #Syntax: <local_config>, <mapped_config>
 #Use Variable of TEMPLATE_VAR for dynamic creation of variables based on folder structure.
 #=============================================================================
+#set deviceconfig, set template TEMPLATE_VAR config deviceconfig
+#set address, set shared address
 ```
 
 ## Determining Local to Mapped
@@ -107,7 +110,7 @@ set zone, set template TEMPLATE_VAR config vsys vsys1 zone
 ./config_mapper.py [ -input-dir <input_directory> -debug ]
 ```
 
-### example of execution of script. 
+### Example of execution of script. 
 ```
 ./config_mapper.py -input-dir _input
 ```
@@ -164,7 +167,7 @@ set zone, set template TEMPLATE_VAR config vsys vsys1 zone
 ```
 
 
-### example To show Debug Commands
+### Example To show Debug Commands
 ```
 ./config_mapper.py -input-dir _input -debug
 ```
