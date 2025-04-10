@@ -179,3 +179,4 @@ cython_debug/
 _debug_output.txt
 .vscode/
 _archived_versions
+_archived_versions/*
