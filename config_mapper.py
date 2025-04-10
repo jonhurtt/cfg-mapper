@@ -224,10 +224,13 @@ def func_find_config_objects(input_filename, config_object_mapping):
 # Get Output File Header
 #*****************************************************
 def get_output_file_header(input_filepath, config_object_mapping):
+	
 	header = []
 	header.append("#"+str(func_spacer()))
 	header.append("# Time Created: " + str(datetime.strftime(datetime.today(), date_format)))
 	header.append("# "+str(sys.argv[0])+" - Formatted configuration from "+input_filepath)
+	header.append("# Template Variable "+get_template_subdir(input_filepath))
+	
 	header.append("# Command Mappings")
 	for config_object in config_object_mapping.values():
 		header.append("#"+str(config_object))

@@ -79,45 +79,45 @@ Make definitions in [```config_object_mapping.txt```](config_object_mapping.txt)
 
 ```
 ======================================================================================================================================================
-11:50.38.125660 AM: Start of App - version 2.0
+12:36.20.840682 PM: Start of App - version 2.0
 ======================================================================================================================================================
-11:50.38.125681 AM: Start Time: Thursday, April 10, 2025 @ 11:50.38
+12:36.20.840703 PM: Start Time: Thursday, April 10, 2025 @ 12:36.20
 ======================================================================================================================================================
-11:50.38.125685 AM: System Arguments
-11:50.38.125689 AM: ['./config_mapper.py', '-input-dir', '_input']
+12:36.20.840708 PM: System Arguments
+12:36.20.840712 PM: ['./config_mapper.py', '-input-dir', '_input']
 ======================================================================================================================================================
-11:50.38.125700 AM: input_dir defined via System Arguments:  _input
-11:50.38.125705 AM: Input Directory: '_input'
+12:36.20.840724 PM: input_dir defined via System Arguments:  _input
+12:36.20.840730 PM: Input Directory: '_input'
 ======================================================================================================================================================
-11:50.38.125709 AM: Ingesting Config Objects
+12:36.20.840733 PM: Ingesting Config Objects
 ======================================================================================================================================================
-11:50.38.125960 AM: Displaying Configuration Object Mappings
+12:36.20.841055 PM: Displaying Configuration Object Mappings
 
 'set network virtual-router' mapped to 'set template TEMPLATE_VAR config network virtual-router'
 'set network interface' mapped to 'set template TEMPLATE_VAR config network interface'
 'set zone' mapped to 'set template TEMPLATE_VAR config vsys vsys1 zone'
 'set network dhcp interface' mapped to 'set template TEMPLATE_VAR config network dhcp interface'
 ======================================================================================================================================================
-11:50.38.126076 AM: Opening _input/template-001/device-config-02.cfg...
-11:50.38.126080 AM: Searching _input/template-001/device-config-02.cfg...
-11:50.38.135862 AM: set network virtual-router --> Found in 37 line(s)
-11:50.38.144968 AM: set network interface --> Found in 89 line(s)
-11:50.38.153153 AM: set zone --> Found in 40 line(s)
-11:50.38.160578 AM: set network dhcp interface --> Found in 9 line(s)
-11:50.38.160581 AM: Completed Search of _input/template-001/device-config-02.cfg...
+12:36.20.841273 PM: Opening _input/template-001/device-config-02.cfg...
+12:36.20.841277 PM: Searching _input/template-001/device-config-02.cfg...
+12:36.20.851767 PM: set network virtual-router --> Found in 37 line(s)
+12:36.20.861519 PM: set network interface --> Found in 89 line(s)
+12:36.20.869994 PM: set zone --> Found in 40 line(s)
+12:36.20.877630 PM: set network dhcp interface --> Found in 9 line(s)
+12:36.20.877633 PM: Completed Search of _input/template-001/device-config-02.cfg...
 ======================================================================================================================================================
-11:50.38.163193 AM: Writing Output File (_output/template-001/device-config-02.cfg) for Input File (_input/template-001/device-config-02.cfg)
-11:50.38.163821 AM: File Write Complete _output/template-001/device-config-02.cfg;
+12:36.20.880329 PM: Writing Output File (_output/template-001/device-config-02.cfg) for Input File (_input/template-001/device-config-02.cfg)
+12:36.20.881044 PM: File Write Complete '_output/template-001/device-config-02.cfg'
 ======================================================================================================================================================
 ....
 ======================================================================================================================================================
-11:50.38.258622 AM: End Time: Thursday, April 10, 2025 @ 11:50.38
+12:36.20.977313 PM: End Time: Thursday, April 10, 2025 @ 12:36.20
 ======================================================================================================================================================
-11:50.38.258630 AM: Time Elapased: 0.132942 seconds
+12:36.20.977321 PM: Time Elapased: 0.136613 seconds
 ======================================================================================================================================================
-11:50.38.258632 AM: Output Configuration File(s) written to _output/
+12:36.20.977323 PM: Output Configuration File(s) written to _output/
 ======================================================================================================================================================
-11:50.38.258635 AM: End of App
+12:36.20.977326 PM: End of App
 ======================================================================================================================================================
 ======================================================================================================================================================
 
@@ -136,61 +136,60 @@ Make definitions in [```config_object_mapping.txt```](config_object_mapping.txt)
 
 ```
 ======================================================================================================================================================
-11:50.40.380145 AM: Start of App - version 2.0
+12:36.22.127618 PM: Start of App - version 2.0
 ======================================================================================================================================================
-11:50.40.380166 AM: Start Time: Thursday, April 10, 2025 @ 11:50.40
+12:36.22.127639 PM: Start Time: Thursday, April 10, 2025 @ 12:36.22
 ======================================================================================================================================================
-11:50.40.380171 AM: System Arguments
-11:50.40.380175 AM: ['./config_mapper.py', '-input-dir', '_input', '-debug']
+12:36.22.127644 PM: System Arguments
+12:36.22.127648 PM: ['./config_mapper.py', '-input-dir', '_input', '-debug']
 ======================================================================================================================================================
-11:50.40.380181 AM: Debug Flag Enabled
+12:36.22.127654 PM: Debug Flag Enabled
 ======================================================================================================================================================
-11:50.40.380195 AM: input_dir defined via System Arguments:  _input
-11:50.40.380200 AM: Input Directory: '_input'
+12:36.22.127664 PM: input_dir defined via System Arguments:  _input
+12:36.22.127669 PM: Input Directory: '_input'
 ======================================================================================================================================================
-11:50.40.380204 AM: Ingesting Config Objects
+12:36.22.127673 PM: Ingesting Config Objects
 ======================================================================================================================================================
-11:50.40.380260 AM: [*** debug ***][func_ingest_config_objects]set network virtual-router, set template TEMPLATE_VAR config network virtual-router
-11:50.40.380269 AM: [*** debug ***][func_ingest_config_objects]set network interface, set template TEMPLATE_VAR config network interface
-11:50.40.380275 AM: [*** debug ***][func_ingest_config_objects]set zone, set template TEMPLATE_VAR config vsys vsys1 zone
-11:50.40.380283 AM: [*** debug ***][func_ingest_config_objects]set network dhcp interface, set template TEMPLATE_VAR config network dhcp interface
-11:50.40.380309 AM: Displaying Configuration Object Mappings
+12:36.22.127723 PM: [*** debug ***][func_ingest_config_objects]set network virtual-router, set template TEMPLATE_VAR config network virtual-router
+12:36.22.127732 PM: [*** debug ***][func_ingest_config_objects]set network interface, set template TEMPLATE_VAR config network interface
+12:36.22.127738 PM: [*** debug ***][func_ingest_config_objects]set zone, set template TEMPLATE_VAR config vsys vsys1 zone
+12:36.22.127746 PM: [*** debug ***][func_ingest_config_objects]set network dhcp interface, set template TEMPLATE_VAR config network dhcp interface
+12:36.22.127770 PM: Displaying Configuration Object Mappings
 
 'set network virtual-router' mapped to 'set template TEMPLATE_VAR config network virtual-router'
 'set network interface' mapped to 'set template TEMPLATE_VAR config network interface'
 'set zone' mapped to 'set template TEMPLATE_VAR config vsys vsys1 zone'
 'set network dhcp interface' mapped to 'set template TEMPLATE_VAR config network dhcp interface'
 ======================================================================================================================================================
-11:50.40.380318 AM: [*** debug ***][process_directory]Processing Directory : _input
-11:50.40.380378 AM: [*** debug ***][process_directory]dirpath: _input
-11:50.40.380429 AM: [*** debug ***][process_directory]dirpath: _input/template-001
-11:50.40.380435 AM: [*** debug ***][process_directory]filepath: _input/template-001/device-config-02.cfg
-11:50.40.380440 AM: Opening _input/template-001/device-config-02.cfg...
-11:50.40.380444 AM: Searching _input/template-001/device-config-02.cfg...
-11:50.40.380448 AM: [*** debug ***][func_find_config_objects][config_object search] set network virtual-router
-11:50.40.380489 AM: [*** debug ***][func_find_config_objects][searching for set network virtual-router in 'set deviceconfig system ip-address 192.168.47.20']
-11:50.40.380495 AM: [*** debug ***][func_find_config_objects][searching for set network virtual-router in 'set deviceconfig system netmask 255.255.255.0']
+12:36.22.127779 PM: [*** debug ***][process_directory]Processing Directory : _input
+12:36.22.127827 PM: [*** debug ***][process_directory]dirpath: _input
+12:36.22.127878 PM: [*** debug ***][process_directory]dirpath: _input/template-001
+12:36.22.127884 PM: [*** debug ***][process_directory]filepath: _input/template-001/device-config-02.cfg
+12:36.22.127889 PM: Opening _input/template-001/device-config-02.cfg...
 ...
-11:50.40.532243 AM: File Write Complete _output/template-002/device-config-03.cfg;
+12:36.22.314632 PM: Writing Output File (_output/template-002/device-config-03.cfg) for Input File (_input/template-002/device-config-03.cfg)
+12:36.22.314913 PM: File Write Complete '_output/template-002/device-config-03.cfg'
 ======================================================================================================================================================
-11:50.40.532258 AM: End Time: Thursday, April 10, 2025 @ 11:50.40
+12:36.22.314927 PM: End Time: Thursday, April 10, 2025 @ 12:36.22
 ======================================================================================================================================================
-11:50.40.532267 AM: Time Elapased: 0.152095 seconds
+12:36.22.314935 PM: Time Elapased: 0.187291 seconds
 ======================================================================================================================================================
-11:50.40.532270 AM: Output Configuration File(s) written to _output/
+12:36.22.314938 PM: Output Configuration File(s) written to _output/
 ======================================================================================================================================================
-11:50.40.532272 AM: End of App
+12:36.22.314941 PM: End of App
 ======================================================================================================================================================
 ======================================================================================================================================================
 ```
 
 
 ## Example Output 
-### Located at ```_output\output_config.cfg```
+
+Located at ```_output\<TEMPLATE_VAR>\<input_filename>.cfg```
 ```
 #======================================================================================================================================================
-# Time Created: Thursday, April 10, 2025 @ 11:50.40
+# Time Created: Thursday, April 10, 2025 @ 12:36.22
 # ./config_mapper.py - Formatted configuration from _input/template-001/device-config-01.cfg
+# Template Variable template-001
 # Command Mappings
 #{'local': 'set network virtual-router', 'mapped': 'set template TEMPLATE_VAR config network virtual-router'}
 #{'local': 'set network interface', 'mapped': 'set template TEMPLATE_VAR config network interface'}
@@ -205,7 +204,7 @@ Make definitions in [```config_object_mapping.txt```](config_object_mapping.txt)
 
 #======================================================================================================================================================
 # ./config_mapper.py  - Formatted configuration from _input/template-001/device-config-01.cfg
-# Time Completed: Thursday, April 10, 2025 @ 11:50.40
+# Time Completed: Thursday, April 10, 2025 @ 12:36.22
 #======================================================================================================================================================
 ```
 

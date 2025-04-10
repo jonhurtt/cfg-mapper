@@ -1,73 +1,73 @@
 ======================================================================================================================================================
-12:11.47.258992 PM: Start of App - version 2.0
+12:36.20.840682 PM: Start of App - version 2.0
 ======================================================================================================================================================
-12:11.47.259018 PM: Start Time: Thursday, April 10, 2025 @ 12:11.47
+12:36.20.840703 PM: Start Time: Thursday, April 10, 2025 @ 12:36.20
 ======================================================================================================================================================
-12:11.47.259022 PM: System Arguments
-12:11.47.259026 PM: ['./config_mapper.py', '-input-dir', '_input']
+12:36.20.840708 PM: System Arguments
+12:36.20.840712 PM: ['./config_mapper.py', '-input-dir', '_input']
 ======================================================================================================================================================
-12:11.47.259038 PM: input_dir defined via System Arguments:  _input
-12:11.47.259042 PM: Input Directory: '_input'
+12:36.20.840724 PM: input_dir defined via System Arguments:  _input
+12:36.20.840730 PM: Input Directory: '_input'
 ======================================================================================================================================================
-12:11.47.259059 PM: Ingesting Config Objects
+12:36.20.840733 PM: Ingesting Config Objects
 ======================================================================================================================================================
-12:11.47.259265 PM: Displaying Configuration Object Mappings
+12:36.20.841055 PM: Displaying Configuration Object Mappings
 
 'set network virtual-router' mapped to 'set template TEMPLATE_VAR config network virtual-router'
 'set network interface' mapped to 'set template TEMPLATE_VAR config network interface'
 'set zone' mapped to 'set template TEMPLATE_VAR config vsys vsys1 zone'
 'set network dhcp interface' mapped to 'set template TEMPLATE_VAR config network dhcp interface'
 ======================================================================================================================================================
-12:11.47.259385 PM: Opening _input/template-001/device-config-02.cfg...
-12:11.47.259389 PM: Searching _input/template-001/device-config-02.cfg...
-12:11.47.269168 PM: set network virtual-router --> Found in 37 line(s)
-12:11.47.278279 PM: set network interface --> Found in 89 line(s)
-12:11.47.286488 PM: set zone --> Found in 40 line(s)
-12:11.47.293924 PM: set network dhcp interface --> Found in 9 line(s)
-12:11.47.293927 PM: Completed Search of _input/template-001/device-config-02.cfg...
+12:36.20.841273 PM: Opening _input/template-001/device-config-02.cfg...
+12:36.20.841277 PM: Searching _input/template-001/device-config-02.cfg...
+12:36.20.851767 PM: set network virtual-router --> Found in 37 line(s)
+12:36.20.861519 PM: set network interface --> Found in 89 line(s)
+12:36.20.869994 PM: set zone --> Found in 40 line(s)
+12:36.20.877630 PM: set network dhcp interface --> Found in 9 line(s)
+12:36.20.877633 PM: Completed Search of _input/template-001/device-config-02.cfg...
 ======================================================================================================================================================
-12:11.47.296503 PM: Writing Output File (_output/template-001/device-config-02.cfg) for Input File (_input/template-001/device-config-02.cfg)
-12:11.47.296847 PM: File Write Complete '_output/template-001/device-config-02.cfg'
+12:36.20.880329 PM: Writing Output File (_output/template-001/device-config-02.cfg) for Input File (_input/template-001/device-config-02.cfg)
+12:36.20.881044 PM: File Write Complete '_output/template-001/device-config-02.cfg'
 ======================================================================================================================================================
-12:11.47.296863 PM: Opening _input/template-001/device-config-01.cfg...
-12:11.47.296866 PM: Searching _input/template-001/device-config-01.cfg...
-12:11.47.304549 PM: set network virtual-router --> Found in 37 line(s)
-12:11.47.312292 PM: set network interface --> Found in 89 line(s)
-12:11.47.319387 PM: set zone --> Found in 40 line(s)
-12:11.47.326627 PM: set network dhcp interface --> Found in 9 line(s)
-12:11.47.326632 PM: Completed Search of _input/template-001/device-config-01.cfg...
+12:36.20.881061 PM: Opening _input/template-001/device-config-01.cfg...
+12:36.20.881064 PM: Searching _input/template-001/device-config-01.cfg...
+12:36.20.889192 PM: set network virtual-router --> Found in 37 line(s)
+12:36.20.897076 PM: set network interface --> Found in 89 line(s)
+12:36.20.904224 PM: set zone --> Found in 40 line(s)
+12:36.20.910919 PM: set network dhcp interface --> Found in 9 line(s)
+12:36.20.910922 PM: Completed Search of _input/template-001/device-config-01.cfg...
 ======================================================================================================================================================
-12:11.47.329122 PM: Writing Output File (_output/template-001/device-config-01.cfg) for Input File (_input/template-001/device-config-01.cfg)
-12:11.47.329632 PM: File Write Complete '_output/template-001/device-config-01.cfg'
+12:36.20.913335 PM: Writing Output File (_output/template-001/device-config-01.cfg) for Input File (_input/template-001/device-config-01.cfg)
+12:36.20.913645 PM: File Write Complete '_output/template-001/device-config-01.cfg'
 ======================================================================================================================================================
-12:11.47.329720 PM: Opening _input/template-002/device-config-04.cfg...
-12:11.47.329722 PM: Searching _input/template-002/device-config-04.cfg...
-12:11.47.337166 PM: set network virtual-router --> Found in 37 line(s)
-12:11.47.344878 PM: set network interface --> Found in 89 line(s)
-12:11.47.351995 PM: set zone --> Found in 40 line(s)
-12:11.47.358734 PM: set network dhcp interface --> Found in 9 line(s)
-12:11.47.358737 PM: Completed Search of _input/template-002/device-config-04.cfg...
+12:36.20.913822 PM: Opening _input/template-002/device-config-04.cfg...
+12:36.20.913825 PM: Searching _input/template-002/device-config-04.cfg...
+12:36.20.921444 PM: set network virtual-router --> Found in 37 line(s)
+12:36.20.929001 PM: set network interface --> Found in 89 line(s)
+12:36.20.936035 PM: set zone --> Found in 40 line(s)
+12:36.20.942660 PM: set network dhcp interface --> Found in 9 line(s)
+12:36.20.942663 PM: Completed Search of _input/template-002/device-config-04.cfg...
 ======================================================================================================================================================
-12:11.47.361180 PM: Writing Output File (_output/template-002/device-config-04.cfg) for Input File (_input/template-002/device-config-04.cfg)
-12:11.47.361534 PM: File Write Complete '_output/template-002/device-config-04.cfg'
+12:36.20.945070 PM: Writing Output File (_output/template-002/device-config-04.cfg) for Input File (_input/template-002/device-config-04.cfg)
+12:36.20.945621 PM: File Write Complete '_output/template-002/device-config-04.cfg'
 ======================================================================================================================================================
-12:11.47.361551 PM: Opening _input/template-002/device-config-03.cfg...
-12:11.47.361554 PM: Searching _input/template-002/device-config-03.cfg...
-12:11.47.368833 PM: set network virtual-router --> Found in 37 line(s)
-12:11.47.376453 PM: set network interface --> Found in 89 line(s)
-12:11.47.383606 PM: set zone --> Found in 40 line(s)
-12:11.47.390491 PM: set network dhcp interface --> Found in 9 line(s)
-12:11.47.390494 PM: Completed Search of _input/template-002/device-config-03.cfg...
+12:36.20.945630 PM: Opening _input/template-002/device-config-03.cfg...
+12:36.20.945636 PM: Searching _input/template-002/device-config-03.cfg...
+12:36.20.953080 PM: set network virtual-router --> Found in 37 line(s)
+12:36.20.960489 PM: set network interface --> Found in 89 line(s)
+12:36.20.967659 PM: set zone --> Found in 40 line(s)
+12:36.20.974497 PM: set network dhcp interface --> Found in 9 line(s)
+12:36.20.974500 PM: Completed Search of _input/template-002/device-config-03.cfg...
 ======================================================================================================================================================
-12:11.47.392926 PM: Writing Output File (_output/template-002/device-config-03.cfg) for Input File (_input/template-002/device-config-03.cfg)
-12:11.47.393212 PM: File Write Complete '_output/template-002/device-config-03.cfg'
+12:36.20.977005 PM: Writing Output File (_output/template-002/device-config-03.cfg) for Input File (_input/template-002/device-config-03.cfg)
+12:36.20.977297 PM: File Write Complete '_output/template-002/device-config-03.cfg'
 ======================================================================================================================================================
-12:11.47.393229 PM: End Time: Thursday, April 10, 2025 @ 12:11.47
+12:36.20.977313 PM: End Time: Thursday, April 10, 2025 @ 12:36.20
 ======================================================================================================================================================
-12:11.47.393237 PM: Time Elapased: 0.134213 seconds
+12:36.20.977321 PM: Time Elapased: 0.136613 seconds
 ======================================================================================================================================================
-12:11.47.393240 PM: Output Configuration File(s) written to _output/
+12:36.20.977323 PM: Output Configuration File(s) written to _output/
 ======================================================================================================================================================
-12:11.47.393242 PM: End of App
+12:36.20.977326 PM: End of App
 ======================================================================================================================================================
 ======================================================================================================================================================
