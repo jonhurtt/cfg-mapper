@@ -1,0 +1,28 @@
+#=============================================================================
+#Example List of Configuration Objects to Search for, a space will be appended at end of each command
+#Synatx: <local_config>, <mapped_config>
+#Use Variable of TEMPLATE_VAR for dynamic creation of variables based on folder structure.
+#=============================================================================
+#set deviceconfig, set template TEMPLATE_VAR config deviceconfig
+#set address, set shared address
+#set zone, set shared zone, set template TEMPLATE_VAR config  vsys vsys1 
+#set network interface, set template TEMPLATE_VAR config network
+
+#=============================================================================
+#Example Mutli Line Commands
+#=============================================================================
+#set deviceconfig system login-banner, set template TEMPLATE_VAR config deviceconfig system login-banner
+#et shared certificate, set template TEMPLATE_VAR config shared certificate
+
+#=============================================================================
+#Example Error Handling of incorrectly defined configuration object. 
+#=============================================================================
+#set rulebase security rules, set address, set shared address
+
+#=============================================================================
+#Configuration Object Mappings
+#=============================================================================
+set network virtual-router, set template TEMPLATE_VAR config network virtual-router 
+set network interface, set template TEMPLATE_VAR config network interface 
+set zone, set template TEMPLATE_VAR config vsys vsys1 zone
+set network dhcp interface, set template TEMPLATE_VAR config network dhcp interface 
