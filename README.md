@@ -104,7 +104,7 @@ set zone, set template TEMPLATE_VAR config vsys vsys1 zone
 
 ## Execute Script
 ```
-./config_mapper.py [ -input-dir <filename> -debug ]
+./config_mapper.py [ -input-dir <input_directory> -debug ]
 ```
 
 ### example of execution of script. 
