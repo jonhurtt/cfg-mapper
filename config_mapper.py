@@ -44,8 +44,6 @@ def func_spacer(length=spacer_length):
 #*****************************************************
 def log_event(event, spacer_flag=True, ts_flag=True, debug_command=False):
 	event_output = ""
-	
-
 
 	if ts_flag:
 		timestamp = datetime.strftime(datetime.today(), '%H:%M.%S.%f %p')
@@ -182,6 +180,7 @@ def func_find_config_objects(input_filename, config_object_mapping):
 						else:
 							log_debug_event("[MATCH] "+config_object+" --> Found in ["+input_config_command.strip()+"]", "func_find_config_objects")
 
+						#Check to see if input command is mutli-line
 						if check_multi_line(input_config_command):
 							log_debug_event("Multi-Line Detected: " + input_config_command.strip()[:char_limit], "func_find_config_objects")
 							while(not end_of_line_flag):
@@ -195,14 +194,16 @@ def func_find_config_objects(input_filename, config_object_mapping):
 							config_object_search_count += 1
 							end_of_line_flag = False
 							
+							# Error cannot find trailing double quote - malformed input config file
 							if check_multi_line(input_config_command):
-								log_event("[ERROR - func_find_config_objects] with dynamic multi-line ["+input_config_command+"]")
+								log_event("[ERROR - func_find_config_objects] with dynamic multi-line ["+input_config_command+"] - malformed configuration file")
 								sys.exit()
 							else:
 								log_debug_event("Multi-Line Capture Complete", "func_find_config_objects")
 								if check_for_duplication(input_config_command.strip(), raw_config_commands):
 									raw_config_commands.append(input_config_command.strip())
-							
+
+						#Not a Multi-Line Command	
 						else:
 							log_debug_event("Multi-Line False - Adding to Commands", "func_find_config_objects")
 							config_object_search_count += 1
@@ -243,7 +244,6 @@ def get_output_file_footer(input_filepath):
 	footer.append("# Time Completed: " + str(datetime.strftime(datetime.today(), date_format)))
 	footer.append("#"+str(func_spacer()))
 	return footer
-
 
 #*****************************************************
 # Get Command Header
@@ -292,6 +292,8 @@ def format_output(input_filepath, raw_config_commands, config_object_mapping):
 		
 		for raw_config_command in raw_config_commands:
 			log_debug_event("Local: "+config_object+" - rawconfig: "+raw_config_command+" ","format_output")
+			
+			#If raw configuration command matches current configuration object
 			if config_object+space in raw_config_command: #add space at end of each config object
 				log_debug_event("Match","format_output")
 				formatted_config_command = raw_config_command.replace(str(config_object), config_object_map['mapped'])
@@ -330,7 +332,6 @@ def func_write_to_file(input_filepath, formatted_output):
 
 	log_event("File Write Complete '"+output_filepath+"'")
 
-
 #*****************************************************
 #Process Input Config File and Create Output Config File
 #*****************************************************
@@ -359,8 +360,7 @@ def process_directory(directory_path, config_object_mapping):
 	except Exception as e:
 		log_event("An error occurred: {"+str(e)+"}")
 				
-				
-
+			
 #=================================================================================
 #=================================================================================
 #Start of Main Program
