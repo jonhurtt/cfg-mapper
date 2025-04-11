@@ -330,7 +330,7 @@ def get_template_subdir(input_filepath):
 #Generate Output Filepath
 #*****************************************************
 def generate_output_filepath(input_filepath):
-	return output_dir+get_template_subdir(input_filepath)+"/"+os.path.basename(input_filepath)
+	return output_dir+get_template_subdir(input_filepath)+"/formatted-"+os.path.basename(input_filepath)
 
 #*****************************************************
 #Write Output to file

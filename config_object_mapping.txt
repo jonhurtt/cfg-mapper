@@ -17,8 +17,8 @@
 #=============================================================================
 #Example of overlapping searches
 #=============================================================================
-set deviceconfig system login-banner, set template TEMPLATE_VAR config deviceconfig system login-banner
-set deviceconfig, set template TEMPLATE_VAR config deviceconfig
+#set deviceconfig system login-banner, set template TEMPLATE_VAR config deviceconfig system login-banner
+#set deviceconfig, set template TEMPLATE_VAR config deviceconfig
 
 #=============================================================================
 #Example Error Handling of incorrectly defined configuration object. 
@@ -28,7 +28,7 @@ set deviceconfig, set template TEMPLATE_VAR config deviceconfig
 #=============================================================================
 #Configuration Object Mappings
 #=============================================================================
-#set network virtual-router, set template TEMPLATE_VAR config network virtual-router 
-#set network interface, set template TEMPLATE_VAR config network interface 
-#set zone, set template TEMPLATE_VAR config vsys vsys1 zone
-#set network dhcp interface, set template TEMPLATE_VAR config network dhcp interface 
+set network virtual-router, set template TEMPLATE_VAR config network virtual-router 
+set network interface, set template TEMPLATE_VAR config network interface 
+set zone, set template TEMPLATE_VAR config vsys vsys1 zone
+set network dhcp interface, set template TEMPLATE_VAR config network dhcp interface 
