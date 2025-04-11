@@ -8,7 +8,7 @@ Tested on Python 3.9.6
 Tested with configuration file of 2,741 lines
 
 ## Known Issues.
-1. Possible Duplication in Output of command lines if matches on multiple configuration objects in ```_output\output_config.cfg```
+1. Overlapping Configuration Objects - Possible Duplication in Output of command lines if matches on multiple configuration objects in ```_output\output_config.cfg```
 
 ## Actions Performed
 

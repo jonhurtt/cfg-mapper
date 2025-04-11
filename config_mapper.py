@@ -136,11 +136,11 @@ def check_multi_line(line):
 #*****************************************************
 #Check if the raw command is already in the list.
 #*****************************************************
-def check_for_duplication(input_config_command,raw_config_commands ):
-	log_debug_event("Checking '"+ input_config_command + "'", "check_for_duplication")
-	for raw_commands in raw_config_commands:
-		if input_config_command == raw_commands:
-			log_debug_event("[Duplicate Found] '"+ input_config_command + "'", "check_for_duplication")
+def check_for_duplication(search_value,search_data_set):
+	log_debug_event("Checking '"+ search_value + "'", "check_for_duplication")
+	for search_data in search_data_set:
+		if search_value == search_data:
+			log_debug_event("[Duplicate Found] '"+ search_value + "'", "check_for_duplication")
 			return False
 	return True
 
@@ -151,7 +151,6 @@ def func_find_config_objects(input_filename, config_object_mapping):
 	first_pass_flag = True
 	end_of_line_flag = False
 	raw_config_commands = []
-	
 	
 	log_event("Opening " + input_filename + "...", False) 
 	log_event("Searching " + input_filename + "...", False) 	
@@ -295,14 +294,20 @@ def format_output(input_filepath, raw_config_commands, config_object_mapping):
 		log_debug_event("Start mapping from Local: "+config_object+" ","format_output")
 		formatted_config_commands += get_command_header(config_object_map)
 		
+		#Iterate through all Raw Input Configs
 		for raw_config_command in raw_config_commands:
 			log_debug_event("Local: "+config_object+" - raw_config: "+raw_config_command+" ","format_output")
 			
 			#If raw configuration command matches current configuration object
 			if config_object+space in raw_config_command: #add space at end of each config object
-				log_debug_event("Match","format_output")
+				log_debug_event(new_line+spacer+new_line+"Match: "+new_line+"config_object: "+config_object[:char_limit]+new_line+"raw_config: "+raw_config_command[:char_limit]+new_line+spacer,"format_output")
+				
+				#Format Raw Config and replace Local with Mapped
 				formatted_config_command = raw_config_command.replace(str(config_object), config_object_map['mapped'])
+
+				#Replace with Template variable. 
 				formatted_config_command = formatted_config_command.replace(template_variable_placeholder, template_variable)
+				
 				log_debug_event("Formatted Config Command: "+formatted_config_command,"format_output")
 				formatted_config_commands.append(formatted_config_command)
 	formatted_config_commands += get_output_file_footer(input_filepath)
