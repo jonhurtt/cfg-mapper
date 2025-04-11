@@ -9,7 +9,7 @@
 #set network interface, set template TEMPLATE_VAR config network
 
 #=============================================================================
-#Example MutliLine Commands
+#Example Mutli-Line Commands
 #=============================================================================
 #set deviceconfig system login-banner, set template TEMPLATE_VAR config deviceconfig system login-banner
 #et shared certificate, set template TEMPLATE_VAR config shared certificate
