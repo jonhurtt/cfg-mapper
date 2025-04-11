@@ -227,7 +227,7 @@ set zone, set template TEMPLATE_VAR config vsys vsys1 zone
 
 ## Example Output 
 
-Located at ```_output\<TEMPLATE_VAR>\<input_filename>.cfg```
+Located at ```_output\<TEMPLATE_VAR>\formatted-<input_filename>.cfg```
 ```
 #======================================================================================================================================================
 # Time Created: Thursday, April 10, 2025 @ 12:36.22
