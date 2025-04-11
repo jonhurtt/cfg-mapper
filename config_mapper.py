@@ -4,6 +4,8 @@ import os
 from datetime import datetime
 from datetime import timedelta
 from timeit import default_timer as timer
+from pathlib import Path
+
 #=================================================================================
 #=================================================================================
 #Global Variables
@@ -301,7 +303,7 @@ def format_output(input_filepath, raw_config_commands, config_object_mapping):
 			#If raw configuration command matches current configuration object
 			if config_object+space in raw_config_command: #add space at end of each config object
 				log_debug_event(new_line+spacer+new_line+"Match: "+new_line+"config_object: "+config_object[:char_limit]+new_line+"raw_config: "+raw_config_command[:char_limit]+new_line+spacer,"format_output")
-				
+
 				#Format Raw Config and replace Local with Mapped
 				formatted_config_command = raw_config_command.replace(str(config_object), config_object_map['mapped'])
 
@@ -317,7 +319,12 @@ def format_output(input_filepath, raw_config_commands, config_object_mapping):
 #Generate Output Filepath
 #*****************************************************
 def get_template_subdir(input_filepath):
-	return input_filepath.split("/")[-2].strip()
+	
+	path = Path(input_filepath)
+	log_debug_event("Input Filepath: "+input_filepath, "get_template_subdir")
+	subdir = path.parent.name
+	log_debug_event("subdir: "+subdir, "get_template_subdir")
+	return subdir
 
 #*****************************************************
 #Generate Output Filepath
