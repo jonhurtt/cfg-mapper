@@ -200,6 +200,7 @@ def func_find_config_objects(input_filename, config_object_mapping):
 								sys.exit()
 							else:
 								log_debug_event("Multi-Line Capture Complete", "func_find_config_objects")
+								#Check to see if Input COnfig is already in the list
 								if check_for_duplication(input_config_command.strip(), raw_config_commands):
 									raw_config_commands.append(input_config_command.strip())
 
@@ -207,6 +208,7 @@ def func_find_config_objects(input_filename, config_object_mapping):
 						else:
 							log_debug_event("Multi-Line False - Adding to Commands", "func_find_config_objects")
 							config_object_search_count += 1
+							#Check to see if Input COnfig is already in the list
 							if check_for_duplication(input_config_command.strip(), raw_config_commands):
 								raw_config_commands.append(input_config_command.strip())
 	
