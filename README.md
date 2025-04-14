@@ -121,48 +121,55 @@ set zone, set template TEMPLATE_VAR config vsys vsys1 zone
 ```
 
 ```
-======================================================================================================================================================
-12:36.20.840682 PM: Start of App - version 2.0
-======================================================================================================================================================
-12:36.20.840703 PM: Start Time: Thursday, April 10, 2025 @ 12:36.20
-======================================================================================================================================================
-12:36.20.840708 PM: System Arguments
-12:36.20.840712 PM: ['./config_mapper.py', '-input-dir', '_input']
-======================================================================================================================================================
-12:36.20.840724 PM: input_dir defined via System Arguments:  _input
-12:36.20.840730 PM: Input Directory: '_input'
-======================================================================================================================================================
-12:36.20.840733 PM: Ingesting Config Objects
-======================================================================================================================================================
-12:36.20.841055 PM: Displaying Configuration Object Mappings
+================================================================================
+15:02.30.080881 PM: Start of App - version 2.0
+================================================================================
+15:02.30.080899 PM: Start Time: Monday, April 14, 2025 @ 15:02.30
+================================================================================
+15:02.30.080902 PM: System Arguments
+15:02.30.080905 PM: ['./config_mapper.py', '-input-dir', '_input']
+================================================================================
+15:02.30.080914 PM: input_dir defined via System Arguments:  _input
+15:02.30.080918 PM: Input Directory: '_input'
+================================================================================
+15:02.30.080920 PM: Ingesting Config Objects
+================================================================================
+15:02.30.081166 PM: Displaying Configuration Object Mappings
 
 'set network virtual-router' mapped to 'set template TEMPLATE_VAR config network virtual-router'
 'set network interface' mapped to 'set template TEMPLATE_VAR config network interface'
 'set zone' mapped to 'set template TEMPLATE_VAR config vsys vsys1 zone'
 'set network dhcp interface' mapped to 'set template TEMPLATE_VAR config network dhcp interface'
-======================================================================================================================================================
-12:36.20.841273 PM: Opening _input/template-001/device-config-02.cfg...
-12:36.20.841277 PM: Searching _input/template-001/device-config-02.cfg...
-12:36.20.851767 PM: set network virtual-router --> Found in 37 line(s)
-12:36.20.861519 PM: set network interface --> Found in 89 line(s)
-12:36.20.869994 PM: set zone --> Found in 40 line(s)
-12:36.20.877630 PM: set network dhcp interface --> Found in 9 line(s)
-12:36.20.877633 PM: Completed Search of _input/template-001/device-config-02.cfg...
-======================================================================================================================================================
-12:36.20.880329 PM: Writing Output File (_output/template-001/device-config-02.cfg) for Input File (_input/template-001/device-config-02.cfg)
-12:36.20.881044 PM: File Write Complete '_output/template-001/device-config-02.cfg'
-======================================================================================================================================================
+================================================================================
+15:02.30.081249 PM: Opening _input/template-001/device-config-02.cfg...
+15:02.30.081252 PM: Searching _input/template-001/device-config-02.cfg...
+================================================================================
+15:02.30.089164 PM: set network virtual-router --> Found in 37 line(s)
+15:02.30.097029 PM: set network interface --> Found in 89 line(s)
+15:02.30.104371 PM: set zone --> Found in 40 line(s)
+15:02.30.111739 PM: set network dhcp interface --> Found in 9 line(s)
+================================================================================
+15:02.30.111747 PM: Input File Line Count: 2,751 configuration lines.
+15:02.30.111751 PM: Configurations Found: 175 line(s).
+15:02.30.111754 PM: Completed Search of _input/template-001/device-config-02.cfg...
+================================================================================
+15:02.30.114386 PM: Writing Output File for Input File '_input/template-001/device-config-02.cfg'
+15:02.30.114819 PM: File Write Complete '_output/template-001/formatted-device-config-02.cfg'
+================================================================================
 ....
-======================================================================================================================================================
-12:36.20.977313 PM: End Time: Thursday, April 10, 2025 @ 12:36.20
-======================================================================================================================================================
-12:36.20.977321 PM: Time Elapsed: 0.136613 seconds
-======================================================================================================================================================
-12:36.20.977323 PM: Output Configuration File(s) written to _output/
-======================================================================================================================================================
-12:36.20.977326 PM: End of App
-======================================================================================================================================================
-======================================================================================================================================================
+================================================================================
+15:02.30.210727 PM: Total Config Lines Processed: 11,004 line(s).
+15:02.30.210731 PM: Total Number of Configurations Found: 700 line(s).
+================================================================================
+15:02.30.210736 PM: End Time: Monday, April 14, 2025 @ 15:02.30
+================================================================================
+15:02.30.210744 PM: Time Elapsed: 0.129839 seconds
+================================================================================
+15:02.30.210747 PM: Output Configuration File(s) written to _output/
+================================================================================
+15:02.30.210749 PM: End of App
+================================================================================
+================================================================================
 
 ```
 
@@ -178,50 +185,56 @@ set zone, set template TEMPLATE_VAR config vsys vsys1 zone
 ```
 
 ```
-======================================================================================================================================================
-12:36.22.127618 PM: Start of App - version 2.0
-======================================================================================================================================================
-12:36.22.127639 PM: Start Time: Thursday, April 10, 2025 @ 12:36.22
-======================================================================================================================================================
-12:36.22.127644 PM: System Arguments
-12:36.22.127648 PM: ['./config_mapper.py', '-input-dir', '_input', '-debug']
-======================================================================================================================================================
-12:36.22.127654 PM: Debug Flag Enabled
-======================================================================================================================================================
-12:36.22.127664 PM: input_dir defined via System Arguments:  _input
-12:36.22.127669 PM: Input Directory: '_input'
-======================================================================================================================================================
-12:36.22.127673 PM: Ingesting Config Objects
-======================================================================================================================================================
-12:36.22.127723 PM: [*** debug ***][func_ingest_config_objects]set network virtual-router, set template TEMPLATE_VAR config network virtual-router
-12:36.22.127732 PM: [*** debug ***][func_ingest_config_objects]set network interface, set template TEMPLATE_VAR config network interface
-12:36.22.127738 PM: [*** debug ***][func_ingest_config_objects]set zone, set template TEMPLATE_VAR config vsys vsys1 zone
-12:36.22.127746 PM: [*** debug ***][func_ingest_config_objects]set network dhcp interface, set template TEMPLATE_VAR config network dhcp interface
-12:36.22.127770 PM: Displaying Configuration Object Mappings
+================================================================================
+15:03.58.320215 PM: Start of App - version 2.0
+================================================================================
+15:03.58.320244 PM: Start Time: Monday, April 14, 2025 @ 15:03.58
+================================================================================
+15:03.58.320247 PM: System Arguments
+15:03.58.320250 PM: ['./config_mapper.py', '-input-dir', '_input', '-debug']
+================================================================================
+15:03.58.320254 PM: Debug Flag Enabled
+================================================================================
+15:03.58.320263 PM: input_dir defined via System Arguments:  _input
+15:03.58.320266 PM: Input Directory: '_input'
+================================================================================
+15:03.58.320269 PM: Ingesting Config Objects
+================================================================================
+15:03.58.320475 PM: [*** debug ***][func_ingest_config_objects]set network virtual-router, set template TEMPLATE_VAR config network virtual-router
+15:03.58.320481 PM: [*** debug ***][func_ingest_config_objects]set network interface, set template TEMPLATE_VAR config network interface
+15:03.58.320485 PM: [*** debug ***][func_ingest_config_objects]set zone, set template TEMPLATE_VAR config vsys vsys1 zone
+15:03.58.320491 PM: [*** debug ***][func_ingest_config_objects]set network dhcp interface, set template TEMPLATE_VAR config network dhcp interface
+15:03.58.320512 PM: Displaying Configuration Object Mappings
 
 'set network virtual-router' mapped to 'set template TEMPLATE_VAR config network virtual-router'
 'set network interface' mapped to 'set template TEMPLATE_VAR config network interface'
 'set zone' mapped to 'set template TEMPLATE_VAR config vsys vsys1 zone'
 'set network dhcp interface' mapped to 'set template TEMPLATE_VAR config network dhcp interface'
-======================================================================================================================================================
-12:36.22.127779 PM: [*** debug ***][process_directory]Processing Directory : _input
-12:36.22.127827 PM: [*** debug ***][process_directory]dirpath: _input
-12:36.22.127878 PM: [*** debug ***][process_directory]dirpath: _input/template-001
-12:36.22.127884 PM: [*** debug ***][process_directory]filepath: _input/template-001/device-config-02.cfg
-12:36.22.127889 PM: Opening _input/template-001/device-config-02.cfg...
+================================================================================
+15:03.58.320523 PM: [*** debug ***][process_directory]Processing Directory : _input
+15:03.58.320571 PM: [*** debug ***][process_directory]dirpath: _input
+15:03.58.320614 PM: [*** debug ***][process_directory]dirpath: _input/template-001
+15:03.58.320618 PM: [*** debug ***][process_directory]filepath: _input/template-001/device-config-02.cfg
+15:03.58.320622 PM: Opening _input/template-001/device-config-02.cfg...
+15:03.58.320624 PM: Searching _input/template-001/device-config-02.cfg...
+================================================================================
 ...
-12:36.22.314632 PM: Writing Output File (_output/template-002/device-config-03.cfg) for Input File (_input/template-002/device-config-03.cfg)
-12:36.22.314913 PM: File Write Complete '_output/template-002/device-config-03.cfg'
-======================================================================================================================================================
-12:36.22.314927 PM: End Time: Thursday, April 10, 2025 @ 12:36.22
-======================================================================================================================================================
-12:36.22.314935 PM: Time Elapsed: 0.187291 seconds
-======================================================================================================================================================
-12:36.22.314938 PM: Output Configuration File(s) written to _output/
-======================================================================================================================================================
-12:36.22.314941 PM: End of App
-======================================================================================================================================================
-======================================================================================================================================================
+15:03.58.468464 PM: Writing Output File for Input File '_input/template-002/device-config-03.cfg'
+15:03.58.468738 PM: File Write Complete '_output/template-002/formatted-device-config-03.cfg'
+================================================================================
+15:03.58.468748 PM: Total Config Lines Processed: 11,004 line(s).
+15:03.58.468752 PM: Total Number of Configurations Found: 700 line(s).
+================================================================================
+15:03.58.468758 PM: End Time: Monday, April 14, 2025 @ 15:03.58
+================================================================================
+15:03.58.468767 PM: Time Elapsed: 0.148515 seconds
+================================================================================
+15:03.58.468770 PM: Output Configuration File(s) written to _output/
+================================================================================
+15:03.58.468772 PM: End of App
+================================================================================
+================================================================================
+
 ```
 
 
@@ -229,8 +242,8 @@ set zone, set template TEMPLATE_VAR config vsys vsys1 zone
 
 Located at ```_output\<TEMPLATE_VAR>\formatted-<input_filename>.cfg```
 ```
-#======================================================================================================================================================
-# Time Created: Thursday, April 10, 2025 @ 12:36.22
+#================================================================================
+# Time Created: Monday, April 14, 2025 @ 15:03.58
 # ./config_mapper.py - Formatted configuration from _input/template-001/device-config-01.cfg
 # Template Variable template-001
 # Command Mappings
@@ -238,17 +251,18 @@ Located at ```_output\<TEMPLATE_VAR>\formatted-<input_filename>.cfg```
 #{'local': 'set network interface', 'mapped': 'set template TEMPLATE_VAR config network interface'}
 #{'local': 'set zone', 'mapped': 'set template TEMPLATE_VAR config vsys vsys1 zone'}
 #{'local': 'set network dhcp interface', 'mapped': 'set template TEMPLATE_VAR config network dhcp interface'}
-#======================================================================================================================================================
-#======================================================================================================================================================
+#================================================================================
+#================================================================================
 #'set network virtual-router' mapped to 'set template TEMPLATE_VAR config network virtual-router'
-#======================================================================================================================================================
+#================================================================================
 
 ...
 
-#======================================================================================================================================================
+#================================================================================
 # ./config_mapper.py  - Formatted configuration from _input/template-001/device-config-01.cfg
-# Time Completed: Thursday, April 10, 2025 @ 12:36.22
-#======================================================================================================================================================
+# Time Completed: Monday, April 14, 2025 @ 15:03.58
+#================================================================================
+
 ```
 
 ##   Load Configuration

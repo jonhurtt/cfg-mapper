@@ -24,6 +24,8 @@ output_dir = "_output/"
 debug_flag = False
 date_format = '%A, %B %d, %Y @ %H:%M.%S'
 template_variable_placeholder = "TEMPLATE_VAR"
+total_number_of_config_lines = 0
+total_number_of_commands_lines = 0
 
 
 #=================================================================================
@@ -70,6 +72,8 @@ def log_event(event, spacer_flag=True, ts_flag=True, debug_command=False):
 def log_debug_event(event, function):
  	log_event("["+function+"]"+event, False, True, True)
 
+def format_number(number):
+	return "{:,}".format(number)
 
 #*****************************************************
 #Ingest Config Objects
@@ -150,12 +154,16 @@ def check_for_duplication(search_value,search_data_set):
 #Find Config Objects in File
 #*****************************************************
 def func_find_config_objects(input_filename, config_object_mapping):
-	first_pass_flag = True
 	end_of_line_flag = False
 	raw_config_commands = []
+	input_file_line_count = 0
+	input_file_command_count = 0
+	first_pass_flag = True;
+	global total_number_of_config_lines
+	global total_number_of_commands_lines
 	
 	log_event("Opening " + input_filename + "...", False) 
-	log_event("Searching " + input_filename + "...", False) 	
+	log_event("Searching " + input_filename + "...") 	
 
 	#Iterate through configurations
 	for config_object_map in config_object_mapping.values():
@@ -172,6 +180,10 @@ def func_find_config_objects(input_filename, config_object_mapping):
 				
 				#Ignore Commented (#) lines
 				if not input_config_command.startswith("#"): #Ignore Commented lines in the Input
+					
+					if first_pass_flag:
+						input_file_line_count = input_file_line_count + 1
+
 					#Compare if Config object is in the Input Config Command	
 					if config_object+space in input_config_command: #add space at end of each config object
 						
@@ -193,6 +205,7 @@ def func_find_config_objects(input_filename, config_object_mapping):
 									end_of_line_flag = True
 							
 							config_object_search_count += 1
+							input_file_command_count += 1
 							end_of_line_flag = False
 							
 							# Error cannot find trailing double quote - malformed input config file
@@ -209,16 +222,27 @@ def func_find_config_objects(input_filename, config_object_mapping):
 						else:
 							log_debug_event("Multi-Line False - Adding to Commands", "func_find_config_objects")
 							config_object_search_count += 1
+							input_file_command_count += 1
 							#Check to see if Input COnfig is already in the list
 							if check_for_duplication(input_config_command.strip(), raw_config_commands):
 								raw_config_commands.append(input_config_command.strip())
+			#
+			first_pass_flag = False
 	
 		#Summarize after each config object			
-		log_event(config_object+" --> Found in " +str(config_object_search_count)+ " line(s)", False)
+		log_event(config_object+" --> Found in " +format_number(config_object_search_count)+ " line(s)", False)
+			
 		
 		#set first past flag to false
-		first_pass_flag =False	
+		first_pass_flag =False
+	print(spacer)
 	
+
+	total_number_of_config_lines += input_file_line_count
+	total_number_of_commands_lines += input_file_command_count
+
+	log_event("Input File Line Count: " + format_number(input_file_line_count) + " configuration lines.", False) 		
+	log_event("Configurations Found: " + format_number(input_file_command_count) + " line(s).", False) 		
 	log_event("Completed Search of " + input_filename + "...") 		
 	return raw_config_commands
 
@@ -337,7 +361,7 @@ def generate_output_filepath(input_filepath):
 #*****************************************************
 def func_write_to_file(input_filepath, formatted_output):
 	output_filepath = generate_output_filepath(input_filepath)
-	log_event("Writing Output File ("+output_filepath+") for Input File ("+input_filepath+")", False)
+	log_event("Writing Output File for Input File '"+input_filepath+"'", False)
 	os.makedirs(os.path.dirname(output_filepath), exist_ok=True)
 	
 	try:
@@ -357,7 +381,6 @@ def process_input_cfg(input_filepath, config_object_mapping):
 	raw_output = func_find_config_objects(input_filepath, config_object_mapping)
 	formatted_output = format_output(input_filepath, raw_output, config_object_mapping)
 	func_write_to_file(input_filepath, formatted_output)
-
 
 #*****************************************************
 #Process Input Directory
@@ -423,6 +446,9 @@ show_config_objects_mapping(config_object_mapping)
 
 #Process Directory
 process_directory(input_dir, config_object_mapping)
+
+log_event("Total Config Lines Processed: " + format_number(total_number_of_config_lines) + " line(s).", False) 		
+log_event("Total Number of Configurations Found: " + format_number(total_number_of_commands_lines) + " line(s).") 		
 
 #Finish and End App
 end = timer()
